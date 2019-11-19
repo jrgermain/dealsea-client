@@ -10,8 +10,8 @@ public class DealseaClient {
 		while (true) {
 			long startTime = System.currentTimeMillis();
 			// TODO Parse page
-			long endTime = System.currentTimeMillis();
-			Thread.sleep(intervalMillis - (endTime - startTime));
+			long timeElapsed = System.currentTimeMillis() - startTime;
+			Thread.sleep(intervalMillis - timeElapsed);
 		}
 	}
 }
