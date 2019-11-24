@@ -1,4 +1,9 @@
+import java.util.List;
+
 public class DealseaClient {
+
+	private static final String DEALSEA_URL = "https://dealsea.com/";
+	private static final String DEALSEA_RESULT_SELECTOR = "div.dealcontent > strong > a";
 
 	public static void main(String[] args) throws InterruptedException {
 		// Read console input
@@ -9,7 +14,11 @@ public class DealseaClient {
 
 		while (true) {
 			long startTime = System.currentTimeMillis();
-			// TODO Parse page
+
+			// Get search results
+			ParseWebAddress pwa = new ParseWebAddress(DEALSEA_URL, DEALSEA_RESULT_SELECTOR, keyWord);
+			List<String> results = pwa.getParsedData();
+
 			long timeElapsed = System.currentTimeMillis() - startTime;
 			Thread.sleep(intervalMillis - timeElapsed);
 		}
