@@ -21,4 +21,12 @@ public class ConsoleInput {
         io.close();
     }
 
+    int getInterval() {
+        return this.interval;
+    }
+
+    String getKeyWord() {
+        return  this.keyWord;
+    }
+
 }
