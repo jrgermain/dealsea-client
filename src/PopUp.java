@@ -7,7 +7,7 @@ public class PopUp extends JFrame {
 	public PopUp(){
 		super("Deals App");
 		setSize(400,500);
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		// setLayout(null);
 
 		add(popUpPanel);
@@ -15,8 +15,8 @@ public class PopUp extends JFrame {
 	}
 
 	public void displayItems(List<String> items){
-		for(int i = 0; i < items.size();){
-			JLabel currItem = new JLabel(items.get(i));
+		for (String item : items) {
+			JLabel currItem = new JLabel(item);
 			this.popUpPanel.add(currItem);
 		}
 	}
