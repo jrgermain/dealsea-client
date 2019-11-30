@@ -20,7 +20,7 @@ public class DealseaClient {
 			List<String> results = pwa.getParsedData();
 
 			// Display search results
-			popUps popUp = new popUps();
+			PopUp popUp = new PopUp();
 			popUp.displayItems(results);
 
 			long timeElapsed = System.currentTimeMillis() - startTime;
