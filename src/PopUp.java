@@ -1,10 +1,10 @@
 import javax.swing.*;
 import java.util.List;
 
-public class popUps extends JFrame {
+public class PopUp extends JFrame {
 	JPanel popUpPanel = new JPanel();
 
-	public popUps(){
+	public PopUp(){
 		super("Deals App");
 		setSize(400,500);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
