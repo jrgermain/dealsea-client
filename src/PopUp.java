@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.awt.*;
 import java.util.List;
 
 public class PopUp extends JFrame {
@@ -6,7 +7,7 @@ public class PopUp extends JFrame {
 
 	public PopUp(){
 		super("Deals App");
-		setSize(400,500);
+		setMinimumSize(new Dimension(400, 500));
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		popUpPanel.setLayout(new BoxLayout(popUpPanel, BoxLayout.Y_AXIS));
 
@@ -21,5 +22,6 @@ public class PopUp extends JFrame {
 			JLabel currItem = new JLabel(item);
 			this.popUpPanel.add(currItem);
 		}
+		pack();
 	}
 }
