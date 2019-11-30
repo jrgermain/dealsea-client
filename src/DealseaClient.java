@@ -4,6 +4,7 @@ public class DealseaClient {
 
 	private static final String DEALSEA_URL = "https://dealsea.com/";
 	private static final String DEALSEA_RESULT_SELECTOR = "div.dealcontent > strong > a";
+	private static PopUp popUp;
 
 	public static void main(String[] args) throws InterruptedException {
 		// Read console input
@@ -20,7 +21,7 @@ public class DealseaClient {
 			List<String> results = pwa.getParsedData();
 
 			// Display search results
-			PopUp popUp = new PopUp();
+			if (popUp == null || !popUp.isDisplayable()) popUp = new PopUp();
 			popUp.displayItems(results);
 
 			long timeElapsed = System.currentTimeMillis() - startTime;

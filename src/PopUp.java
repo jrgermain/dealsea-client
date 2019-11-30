@@ -15,6 +15,7 @@ public class PopUp extends JFrame {
 	}
 
 	public void displayItems(List<String> items){
+		this.popUpPanel.removeAll();
 		for (String item : items) {
 			JLabel currItem = new JLabel(item);
 			this.popUpPanel.add(currItem);
