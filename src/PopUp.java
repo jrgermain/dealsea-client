@@ -6,7 +6,7 @@ public class PopUp extends JFrame {
 	JPanel popUpPanel = new JPanel();
 
 	public PopUp(){
-		super("Deals App");
+		super("Deal Search");
 		setMinimumSize(new Dimension(400, 500));
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		popUpPanel.setLayout(new BoxLayout(popUpPanel, BoxLayout.Y_AXIS));
