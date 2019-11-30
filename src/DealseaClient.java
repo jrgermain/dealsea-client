@@ -19,6 +19,10 @@ public class DealseaClient {
 			ParseWebAddress pwa = new ParseWebAddress(DEALSEA_URL, DEALSEA_RESULT_SELECTOR, keyWord);
 			List<String> results = pwa.getParsedData();
 
+			// Display search results
+			popUps popUp = new popUps();
+			popUp.displayItems(results);
+
 			long timeElapsed = System.currentTimeMillis() - startTime;
 			Thread.sleep(intervalMillis - timeElapsed);
 		}
