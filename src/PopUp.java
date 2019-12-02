@@ -17,10 +17,15 @@ public class PopUp extends JFrame {
 
 	public void displayItems(List<String> items){
 		this.popUpPanel.removeAll();
-		System.out.println("Displaying " + items.size() + " results");
-		for (String item : items) {
-			JLabel currItem = new JLabel(item);
-			this.popUpPanel.add(currItem);
+		if (items.size() == 0) {
+			System.out.println("No results found");
+			this.popUpPanel.add(new JLabel("No results found"));
+		} else {
+			System.out.println("Displaying " + items.size() + " results");
+			for (String item : items) {
+				JLabel currItem = new JLabel(item);
+				this.popUpPanel.add(currItem);
+			}
 		}
 		pack();
 	}
