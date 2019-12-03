@@ -8,7 +8,7 @@ public class ConsoleInput {
 
     ConsoleInput(){
         //Input
-        System.out.println("---Deal Search---");
+        System.out.println("---Deal Sailor---");
         System.out.println("Enter an item you want to search for");
         keyWord = io.nextLine();
         System.out.println("Refresh Frequency(min(s))");
